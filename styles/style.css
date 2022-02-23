@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.br-banner {
+  font-family: Verdana, arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+
+header {
+  background-color: white;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header p {
+  font-size: 1em;
+  margin-left: 2em;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+nav ul a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  background-color: black;
+  color: white;
+  padding: 1em 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.br-hero {
+  background-color: rgb(0,0,0,0.6);
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  padding: 0.4em;
+}
+
+.architects-hero {
+  display: none;
+  color: white;
+  font-size: 1.8em;
+  margin-left: 0.25em; 
+}
+
+.br-overlay {
+  font-size: 2em;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+}
+
+main {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+main h2 {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+}
+
+main .house-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main .house-card p {
+  background-color: black;
+  color: white;
+  padding: 0.75em;
+  position: absolute;
+  top: 0;
+}
+
+main .houses {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  row-gap: 1em;
+}
+
+main .about h2,
+main .contact h2 {
+  margin-bottom: 1em;
+}
+
+main .about {
+  margin-bottom: 2em;
+}
+
+main .staff img {
+  filter: grayscale(80%);
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+main .staff h3 {
+  margin-bottom: 1.5em;
+}
+
+main .staff h4 {
+  margin-bottom: 1em;
+}
+
+main .staff p {
+  margin-bottom: 1em;
+}
+
+main .staff a {
+  background-color: lightgray;
+  color: black;
+  display: block;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  text-align: center;
+  text-decoration: none;
+}
+
+main .staff a:hover {
+  background-color: black;
+  color: white;
+}
+
+main .staff {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+  row-gap: 2em;
+}
+
+main .contact p {
+  margin-bottom: 1em;
+}
+
+main .contact form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+main .contact form input {
+  padding: 1em;
+}
+
+main .contact form button {
+  margin-top: 1em;
+}
+
+main .contact form button {
+  background-color: black;
+  color: white;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+main .contact {
+  margin-bottom: 2em;
+}
+
+main .contact input {
+  font-family: FontAwesome;
+}
+
+main .map-image img {
+  width: 100%;
+}
+
+main .map-image {
+  margin-bottom: 1em;
+}
+
+footer {
+  background-color: black;
+  height: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+  nav {
+    display: inline;
+  }
+
+  header {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .architects-hero {
+    display: inline;
+  }
+
+  main .houses {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  main .staff {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  main .house-card,
+  main .staff-card {
+    max-width: 49%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  main .house-card,
+  main .staff-card {
+    max-width: 24%;
+  }
+}
